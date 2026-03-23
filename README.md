@@ -1,93 +1,36 @@
-# EcoCalc - Karbon Ayak Izi ve ROI Skorkarti
+# 🌿 EcoCalc - Karbon Ayak İzi ve ROI Skorkartı
 
-EcoCalc, KOBI'ler ve kurumlar icin gelistirilmis tek sayfalik bir karbon ve enerji analiz aracidir.  
-Uygulama; aylik enerji tuketim verilerinden yillik emisyon, enerji maliyeti, GES tasarruf potansiyeli ve geri donus suresi (ROI) hesaplar.
+**EcoCalc**, KOBİ'ler ve kurumlar için geliştirilmiş, tek sayfalık bir karbon ve enerji analiz aracıdır. Uygulama; aylık enerji tüketim verilerinden yıllık emisyon, enerji maliyeti, GES (Güneş Enerjisi Santrali) tasarruf potansiyeli ve yatırım geri dönüş süresini (ROI) anlık olarak hesaplar.
 
-## Ozellikler
+🚀 **Canlı Uygulama:** [https://ecocalc-tez.vercel.app/](https://ecocalc-tez.vercel.app/)
 
-- Tek ekranda hizli veri girisi ve anlik sonuc paneli
-- Emisyon dagilimi icin `Recharts` tabanli pasta grafik
-- GES yatirimi icin ROI (amortisman suresi) hesaplamasi
-- Yillik enerji gideri ve agac esdegeri gostergeleri
-- CleanTech temali modern, kart tabanli arayuz (`Tailwind CSS`)
+## ✨ Özellikler
 
-## Teknoloji Yigini
+- **Anlık Analiz:** Tek ekranda hızlı veri girişi ve eş zamanlı sonuç paneli.
+- **Görsel Raporlama:** Emisyon dağılımı için `Recharts` tabanlı dinamik pasta grafik.
+- **Yatırım Analizi:** GES projeleri için özelleştirilmiş amortisman süresi (ROI) hesaplaması.
+- **Ekolojik Göstergeler:** Yıllık enerji gideri ve karbon emisyonuna eş değer ağaç sayısı gösterimi.
+- **Modern Tasarım:** CleanTech temalı, kullanıcı dostu ve kart tabanlı arayüz (`Tailwind CSS`).
 
-- `Vite`
-- `React`
-- `TypeScript`
-- `Tailwind CSS`
-- `Recharts`
-- `lucide-react`
+## 🛠️ Teknoloji Yığını
 
-## Gereksinimler
+- **Framework:** `Vite` + `React`
+- **Dil:** `TypeScript`
+- **Stil:** `Tailwind CSS`
+- **Grafik:** `Recharts`
+- **İkonlar:** `lucide-react`
+- **Yayınlama:** `Vercel`
 
-- `Node.js` (LTS onerilir)
-- `npm`
+## 🚀 Kurulum ve Çalıştırma
 
-## Kurulum
+### Gereksinimler
+- **Node.js** (LTS sürümü önerilir)
+- **npm** veya **yarn**
 
-Proje klasorunde:
-
+### Yerel Kurulum
+1. Proje klasörüne gidin ve paketleri kurun:
 ```bash
-npm install
-```
-
-## Gelistirme Ortami
-
-```bash
-npm run dev
-```
-
-Varsayilan adres: `http://localhost:5173`
-
-## Uretim Build
-
-```bash
-npm run build
-```
-
-Build onizleme:
-
-```bash
-npm run preview
-```
-
-## Kullanim
-
-1. Sol panelden aylik tuketim ve birim fiyat alanlarini doldurun:
-   - Elektrik (kWh, TL/kWh)
-   - Dogalgaz (m3, TL/m3)
-   - Akaryakit (Litre, TL/L)
-   - GES kapasitesi (kWp)
-   - GES kurulum maliyeti (TL)
-2. Sag panelde su degerler anlik guncellenir:
-   - Yillik karbon ayak izi (Ton CO2)
-   - Emisyon kaynak dagilimi (pasta grafik)
-   - GES ROI (yil)
-   - Simulasyon oncesi yillik enerji gideri
-
-## Hesaplama Mantigi
-
-Uygulamadaki temel hesaplamalar:
-
-- **Yillik karbon ayak izi (Ton CO2)**  
-  `(Aylik Elektrik * 0.45 + Aylik Dogalgaz * 2.01 + Aylik Akaryakit * 2.68) * 12 / 1000`
-
-- **Gereken agac sayisi (yaklasik)**  
-  `Yillik karbon (kg) / 45`
-
-- **Yillik enerji gideri (TL)**  
-  `12 * (Elektrik maliyeti + Dogalgaz maliyeti + Akaryakit maliyeti)`
-
-- **GES yillik elektrik uretim varsayimi**  
-  `1 kWp ~ 1400 kWh / yil`
-
-- **Yillik elektrik tasarrufu (TL)**  
-  `GES yillik uretim * Elektrik birim fiyat`
-
-- **ROI (yil)**  
-  `GES kurulum maliyeti / Yillik elektrik tasarrufu`
+npm install`
 
 ## Proje Yapisi
 
